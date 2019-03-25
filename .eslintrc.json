@@ -1,6 +1,9 @@
 {
   "extends": ["airbnb", "prettier"],
   "rules": {
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/accessible-emoji": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "quotes": [
       "error",
