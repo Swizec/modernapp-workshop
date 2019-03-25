@@ -1,12 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import InstagramEmbed from 'react-instagram-embed'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import Swizec from '../images/swizec.jpg'
 import DashboardViz from '../images/dog-dashboard-scatterplots.mp4'
+import PieBarchart from '../images/connected-dataviz.mp4'
+import Salaries from '../images/salaries.gif'
+import JohnSnow from '../images/john-snow-cholera-map.jpeg'
+import Datasaurus from '../images/datasaurus.gif'
 
-import { Video } from '../elements'
+import { Video, BlankUl } from '../elements'
 
 const Welcome = () => (
   <div>
@@ -103,11 +110,225 @@ const Welcome = () => (
   </div>
 )
 
+const WhyDataviz1 = () => (
+  <div>
+    <h1>Question for you ❓</h1>
+    <p>
+      <big>
+        What do engineering salaries, an 1854 cholera outbreak, and T. Rex have
+        in common?
+      </big>
+    </p>
+  </div>
+)
+
+const Goals = () => (
+  <div>
+    <h1>Our goal today</h1>
+    <p>Think of this as our setlist 🤘</p>
+    <p>
+      Our goal today is to get you comfortable with modern React, understand
+      D3, and have the wisdom to choose the right approach to solve your
+      specific challenges.
+    </p>
+    <BlankUl>
+      <li>❓ why dataviz? why react? why d3?</li>
+      <li>📕 when you should or shouldn't use an existing library</li>
+      <li>🆕 overview of React dataviz libraries good for a quick start</li>
+      <li>🎓 learn to understand any D3 example out there</li>
+      <li>🏎 quickly integrate any D3 code in your React project</li>
+      <li>🔧 integrate D3 and React in a scaleable maintainable way</li>
+      <li>⚒ build simple animations with transitions</li>
+      <li>⚒ build complex animations with a game loop</li>
+      <li>💽 connect multiple charts to the same data</li>
+    </BlankUl>
+  </div>
+)
+
+const ProjectLink = ({ url, children }) => (
+  <li>
+    <a href={url}>{children}</a>
+  </li>
+)
+ProjectLink.propTypes = {
+  url: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
+
+const CoolThings = () => (
+  <div>
+    <h1>Here are some cool things I've built with React & D3</h1>
+    <p>
+      These demo well, but aren't practical. Little experiments to see how far
+      we can push this stuff {':)'}
+    </p>
+    <ul>
+      <ProjectLink url="http://swizec.github.io/react-d3-enter-exit-transitions/">
+        Animated typing
+      </ProjectLink>
+      <ProjectLink url="https://swizec.github.io/declarative-canvas-react-konva/">
+        Canvas billiards game
+      </ProjectLink>
+      <ProjectLink url="http://swizec.github.io/react-particles-experiment/">
+        Particle generator
+      </ProjectLink>
+      <ProjectLink url="https://swizec.github.io/react-fractals/">
+        Pythagorean fractal tree
+      </ProjectLink>
+      <ProjectLink url="http://swizec.github.io/space-invaders/">
+        Space Invaders
+      </ProjectLink>
+      <ProjectLink url="https://swizec.github.io/h1b-software-salaries/">
+        Tech salary visualization
+      </ProjectLink>
+      <ProjectLink url="https://swizec.github.io/migrations-map/">
+        A zoomable pannable map of global migrations
+      </ProjectLink>
+      <ProjectLink url="https://build-qoyobtahea.now.sh/">
+        An example of using flexbox in SVG
+      </ProjectLink>
+      <ProjectLink url="https://dist-exhowcijhf.now.sh/">
+        Using React Suspense and Time Slicing in dataviz
+      </ProjectLink>
+      <ProjectLink url={PieBarchart}>
+        A connected piechart barchart viz of travel expenses
+      </ProjectLink>
+      <ProjectLink url="/">This page {':)'}</ProjectLink>
+    </ul>
+
+    <p>No, these projects are not practical, but they demo well {':)'}</p>
+  </div>
+)
+
+const WhoSwiz = () => (
+  <div>
+    <h2>Swizec Teller</h2>
+    <InstagramEmbed
+      url="https://www.instagram.com/p/Bd_SGSzlBrb/"
+      maxWidth={480}
+      hideCaption
+    />
+    <p>
+      Hi, I’m Swizec Teller, a geek with a hat. I help programmers become
+      software engineers. Through this workshop I'm going to teach you all I
+      know about building data visualization with React & D3.
+    </p>
+    <p>
+      You can find out stuff about me, if you ask Google. But generally
+      speaking I have:
+    </p>
+    <ul>
+      <li>been coding for over 20 years</li>
+      <li>
+        <a href="https://swizec.com">writing a blog</a> for 12 years
+        <br />
+        (please don't read early entries, I was in high school lol)
+      </li>
+      <li>
+        published{' '}
+        <a href="http://nightowlsbook.com/">Why Programmers Work at Night</a>,
+        that was fun
+      </li>
+      <li>
+        published{' '}
+        <a href="https://www.packtpub.com/web-development/data-visualization-d3js">
+          Data Visualization with D3.js
+        </a>
+        , dare ask me about publishers
+      </li>
+      <li>
+        published 3 editions of{' '}
+        <a href="https://www.swizec.com/reactd3js/">React + D3</a>, that's been
+        great
+      </li>
+      <li>helped over 10,000 people become better engineers</li>
+      <li>
+        made this{' '}
+        <a href="https://es2017.io">
+          interactive ES6+ cheatsheet &mdash; es2017.io
+        </a>
+      </li>
+    </ul>
+  </div>
+)
+
+const WhyDataviz2 = () => (
+  <div>
+    <h2>
+      What do engineering salaries, an 1854 cholera outbreak, and T. Rex have
+      in common?
+    </h2>
+    <p>You understand them better with datavisualization!</p>
+    <a href="https://swizec.github.io/h1b-software-salaries/">
+      <img
+        src={Salaries}
+        alt="Salary visualization shows who and where makes the most"
+      />
+    </a>
+    <p>Salary visualization shows who and where makes the most</p>
+    <a href="https://en.wikipedia.org/wiki/John_Snow#Cholera">
+      <img
+        src={JohnSnow}
+        alt="John Snow's cholera map shows link between disease and drinking water"
+        style={{ height: 500 }}
+      />
+    </a>
+    <p>
+      John Snow's cholera map shows link between disease and drinking water
+    </p>
+    <a href="https://www.fastcompany.com/90124722/these-12-graphics-explain-why-data-viz-is-absolutely-crucial">
+      <img
+        src={Datasaurus}
+        alt="John Snow's cholera map shows link between disease and drinking water"
+      />
+    </a>
+    <p>Datasaurus show summary statistics aren't the whole story.</p>
+  </div>
+)
+
+const Start = () => (
+  <div>
+    <h1>Let's get down to business</h1>
+    <p>
+      This is an interactive workshop. If you have a question, <b>ask</b>. If
+      something doesn't make sense, <b>ask</b>. If something is confusing,{' '}
+      <b>ask</b>. If I'm not making sense, <b>ask</b>. If your code doesn't
+      work, <b>ask</b>.
+    </p>
+    <p>
+      You will write code today. Some code will live on your computer, some in
+      the browser.
+    </p>
+    <p>We will take breaks.</p>
+    <p>
+      <img src="http://i.imgur.com/04VI9lT.gif" alt="" />
+    </p>
+    <h2>But first ask yourself this: Why are you here?</h2>
+    <p>
+      Answering that question will help you get the most out of today. You can
+      call your answer out to the group, or just think about it.
+    </p>
+    <p>
+      Code you'll write today works with <b>React 16</b> and uses modern{' '}
+      <b>ES6+</b>. We'll assume a development environment created with{' '}
+      <code>create-react-app</code>. This gives us some special powers. I will
+      point them out.
+    </p>
+  </div>
+)
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 
     <Welcome />
+    <WhyDataviz1 />
+    <Goals />
+    <CoolThings />
+    <WhoSwiz />
+    <WhyDataviz2 />
+
+    <Start />
   </Layout>
 )
 
