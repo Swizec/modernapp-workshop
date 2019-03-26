@@ -1,5 +1,9 @@
 import React from 'react'
 
+import InstagramEmbed from 'react-instagram-embed'
+import TweetEmbed from 'react-tweet-embed'
+import { ReactTypeformEmbed as TypeformEmbed } from 'react-typeform-embed'
+
 const CodesandboxEmbed = ({ id, highlights = '' }) => {
   return (
     <iframe
@@ -17,4 +21,13 @@ const CodesandboxEmbed = ({ id, highlights = '' }) => {
   )
 }
 
-export default CodesandboxEmbed
+export {
+  // docs: this file
+  CodesandboxEmbed,
+  // docs: https://sugarshin.github.io/react-instagram-embed/
+  InstagramEmbed,
+  // docs: https://github.com/capaj/react-tweet-embed
+  TweetEmbed,
+  // docs: https://alexgarces.github.io/react-typeform-embed/
+  TypeformEmbed,
+}

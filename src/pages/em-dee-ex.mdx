@@ -1,7 +1,11 @@
 import { graphql } from 'gatsby'
-import TweetEmbed from 'react-tweet-embed'
 
-import CodesandboxEmbed from '../components/embeds'
+import {
+  CodesandboxEmbed,
+  InstagramEmbed,
+  TweetEmbed,
+  TypeformEmbed,
+} from '../components/embeds'
 
 # Will it blend?
 
@@ -26,12 +30,23 @@ export const pageQuery = graphql`
 
 ## And some embeds:
 
+### Codesandbox
+
+<CodesandboxEmbed id="3vmrlm0175" />
+
+### Instagram
+
+<InstagramEmbed url="https://www.instagram.com/p/Br5gJ4-BNro/" />
+
+### Typeform
+
+<TypeformEmbed
+  url="https://swizecteller.typeform.com/to/DElfd8"
+  style={{ position: 'static', height: '350px' }}
+/>
+
 ### Twitter
 
 <TweetEmbed id="1107783039038296064" />
 
 Does this work?
-
-### Codesandbox
-
-<CodesandboxEmbed id="3vmrlm0175" />

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Link from 'gatsby-link'
 
 import _ from 'lodash'
-import InstagramEmbed from 'react-instagram-embed'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -18,6 +17,7 @@ import Datasaurus from '../images/datasaurus.gif'
 import RockOn from '../images/rock-on.gif'
 
 import { Video, BlankUl, SignoffImg, Signature } from '../elements'
+import { InstagramEmbed } from '../components/embeds'
 
 const Welcome = () => (
   <div>
