@@ -1,12 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'React and D3v4 workshop by Swizec',
+    description: 'React and D3v4 workshop by Swizec',
+    author: 'Swizec Teller',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: { pathToConfigModule: 'src/utils/typography.js' },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -25,11 +28,51 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        // This path is relative to the root of the site.
+        icon: 'src/images/gatsby-icon.png',
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: { name: 'src', path: `${__dirname}/src/` },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-code-repls',
+            options: {
+              externals: [
+                'https://cdnjs.cloudflare.com/ajax/libs/react/16.2.0/umd/react.production.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/umd/react-dom.production.min.js',
+              ],
+              dependencies: ['d3'],
+              codesandbox: ['react', 'react-dom', 'd3'],
+              html: '<div id="root"></div>',
+              directory: `${__dirname}/examples/`,
+              target: '_blank',
+            },
+          },
+          'gatsby-remark-autolink-headers',
+        ],
+      },
+    },
+    'gatsby-plugin-twitter',
+    'gatsby-plugin-nprogress',
   ],
 }

@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Link from 'gatsby-link'
 
+import _ from 'lodash'
 import InstagramEmbed from 'react-instagram-embed'
 
 import Layout from '../components/layout'
@@ -318,7 +321,56 @@ const Start = () => (
   </div>
 )
 
-const IndexPage = () => (
+const MDLink = ({ node }) => (
+  <div key={node.id}>
+    <h2>
+      <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+    </h2>
+    <div dangerouslySetInnerHTML={{ __html: node.tableOfContents }} />
+  </div>
+)
+MDLink.propTypes = {
+  node: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    fields: PropTypes.array.isRequired,
+    frontmatter: PropTypes.shape({ title: PropTypes.string.isRequired })
+      .isRequired,
+    tableOfContents: PropTypes.string.isRequired,
+  }).isRequired,
+}
+
+const ListContentPages = ({ data }) => {
+  const pages = data.allMarkdownRemark.edges
+
+  return (
+    <div>
+      <h1>Setlist - Day 1</h1>
+
+      {_.sortBy(pages, ({ node }) => node.fields.slug)
+        .slice(0, 4)
+        .map(MDLink)}
+
+      <h1>Setlist - Day 2</h1>
+
+      {_.sortBy(pages, ({ node }) => node.fields.slug)
+        .slice(4, pages.length)
+        .map(MDLink)}
+
+      <h2>
+        <Link to="/fin">🎊 Fin</Link>
+      </h2>
+    </div>
+  )
+}
+const queryDataPropTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({ edges: PropTypes.array.isRequired })
+      .isRequired,
+  }).isRequired,
+}
+ListContentPages.propTypes = queryDataPropTypes
+
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 
@@ -333,11 +385,35 @@ const IndexPage = () => (
 
     <p>Here's our setlist for today 👇</p>
 
+    <ListContentPages data={data} />
+
     <a href="https://www.youtube.com/watch?v=QxIWDmmqZzY">
       <SignoffImg src={RockOn} title="Rock On 🤘" />
     </a>
     <Signature />
   </Layout>
 )
+IndexPage.propTypes = queryDataPropTypes
+
+export const query = graphql`
+  query IndexQuery {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          timeToRead
+          tableOfContents
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
