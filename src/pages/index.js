@@ -12,8 +12,9 @@ import PieBarchart from '../images/connected-dataviz.mp4'
 import Salaries from '../images/salaries.gif'
 import JohnSnow from '../images/john-snow-cholera-map.jpeg'
 import Datasaurus from '../images/datasaurus.gif'
+import RockOn from '../images/rock-on.gif'
 
-import { Video, BlankUl } from '../elements'
+import { Video, BlankUl, SignoffImg, Signature } from '../elements'
 
 const Welcome = () => (
   <div>
@@ -329,6 +330,13 @@ const IndexPage = () => (
     <WhyDataviz2 />
 
     <Start />
+
+    <p>Here's our setlist for today 👇</p>
+
+    <a href="https://www.youtube.com/watch?v=QxIWDmmqZzY">
+      <SignoffImg src={RockOn} title="Rock On 🤘" />
+    </a>
+    <Signature />
   </Layout>
 )
 
