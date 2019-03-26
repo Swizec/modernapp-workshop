@@ -1,0 +1,22 @@
+import { graphql } from 'gatsby'
+
+# Will it blend?
+
+Here's a paragraph, followed by a paragraph with data!
+
+<div>
+  <code>
+    props.data.site.siteMetadata.description:
+    <br />"{props.data.site.siteMetadata.description}"
+  </code>
+</div>
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`
