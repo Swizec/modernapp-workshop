@@ -1,4 +1,7 @@
 import { graphql } from 'gatsby'
+import TweetEmbed from 'react-tweet-embed'
+
+import CodesandboxEmbed from '../components/embeds'
 
 # Will it blend?
 
@@ -20,3 +23,15 @@ export const pageQuery = graphql`
     }
   }
 `
+
+## And some embeds:
+
+### Twitter
+
+<TweetEmbed id="1107783039038296064" />
+
+Does this work?
+
+### Codesandbox
+
+<CodesandboxEmbed id="3vmrlm0175" />
