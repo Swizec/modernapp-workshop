@@ -10,14 +10,19 @@ import {
 
 # Will it blend?
 
-Here's a paragraph, followed by a paragraph with data!
+### Big image
 
-<div>
-  <code>
-    props.data.site.siteMetadata.description:
-    <br />"{props.data.site.siteMetadata.description}"
-  </code>
-</div>
+Let's see how Gatsby handles a _really_ big image:
+
+![This is the Blue Marble](../images/The_Earth_seen_from_Apollo_17.jpg)
+
+### Gatsby GraphQL
+
+Here is some data from a Gatsby GraphQL query:
+
+<blockquote>
+  <code>"{props.data.site.siteMetadata.description}"</code>
+</blockquote>
 
 export const pageQuery = graphql`
   query {
@@ -28,6 +33,43 @@ export const pageQuery = graphql`
     }
   }
 `
+
+### Syntax highlighting
+
+This is roughly the snippet that generated the GraphQL output above:
+
+```jsx
+render () {
+  return (
+    <blockquote>
+      <code>"{props.data.site.siteMetadata.description}"</code>
+    </blockquote>
+  )
+}
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+
+`
+```
+
+### Local file to code repl
+
+[Check this out on Codesandbox](codesandbox://your-first-app/fac.js)
+
+These are the remark plugins that were added to mdx (linked to docs):
+
+- [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs)
+- [gatsby-remark-copy-linked-files](https://www.gatsbyjs.org/packages/gatsby-remark-copy-linked-files)
+- [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images)
+- [gatsby-remark-code-repls](https://www.gatsbyjs.org/packages/gatsby-remark-code-repls)
+- [gatsby-remark-autolink-headers](https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers)
 
 ## And some embeds:
 
