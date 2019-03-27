@@ -3,6 +3,7 @@ import React from 'react'
 import InstagramEmbed from 'react-instagram-embed'
 import TweetEmbed from 'react-tweet-embed'
 import { ReactTypeformEmbed } from 'react-typeform-embed'
+import VideoEmbed from 'react-player'
 
 const CodesandboxEmbed = ({ id, highlights = '' }) => {
   return (
@@ -34,4 +35,6 @@ export {
   TweetEmbed,
   // docs: https://alexgarces.github.io/react-typeform-embed/
   TypeformEmbed,
+  // docs: https://github.com/CookPete/react-player
+  VideoEmbed,
 }

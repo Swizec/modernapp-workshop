@@ -5,6 +5,7 @@ import {
   InstagramEmbed,
   TweetEmbed,
   TypeformEmbed,
+  VideoEmbed,
 } from '../components/embeds'
 
 # Will it blend?
@@ -50,3 +51,9 @@ export const pageQuery = graphql`
 <TweetEmbed id="1107783039038296064" />
 
 Does this work?
+
+### YouTube
+
+(Also works for a ton of other video providers via `react-player`.)
+
+<VideoEmbed url="https://www.youtube.com/watch?v=9a4YcixDhFM" />
