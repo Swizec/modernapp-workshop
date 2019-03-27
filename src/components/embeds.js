@@ -2,7 +2,7 @@ import React from 'react'
 
 import InstagramEmbed from 'react-instagram-embed'
 import TweetEmbed from 'react-tweet-embed'
-import { ReactTypeformEmbed as TypeformEmbed } from 'react-typeform-embed'
+import { ReactTypeformEmbed } from 'react-typeform-embed'
 
 const CodesandboxEmbed = ({ id, highlights = '' }) => {
   return (
@@ -19,6 +19,10 @@ const CodesandboxEmbed = ({ id, highlights = '' }) => {
       sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
     />
   )
+}
+
+const TypeformEmbed = ({ ...props }) => {
+  return typeof window !== 'undefined' ? <ReactTypeformEmbed {...props} /> : ''
 }
 
 export {

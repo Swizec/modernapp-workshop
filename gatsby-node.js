@@ -47,13 +47,12 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  console.log({ stage })
   if (stage.match(/html/)) {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
-            test: /.*typeform.*/i,
+            test: /react-typeform-embed/,
             loader: loaders.null(),
           },
         ],
