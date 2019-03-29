@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "workshop-base",
+  "name": "modernapp-workshop",
   "builds": [
     {
       "src": "package.json",

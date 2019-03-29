@@ -36,6 +36,15 @@ $ git clone git@github.com:Swizec/modern-webapp-starter-repo.git
 Mind you both of those are their own npm/yarn repository ... package? You'll
 have to be careful about that going forward. It's easy to trip up.
 
+### AWS Credentials
+
+You'll need AWS credentials as well
+
+This is a good guide:
+[click me](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
+
+Make an Admin account for now. It's going to make your life easier.
+
 ### Dependencies for webapp
 
 Go into the `webapp` directory and install dependencies:
