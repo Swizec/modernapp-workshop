@@ -10,7 +10,6 @@ import SEO from '../components/seo'
 
 import Swizec from '../images/swizec.jpg'
 import AppScreenshot from '../images/appscreenshot.png'
-import PieBarchart from '../images/connected-dataviz.mp4'
 import RockOn from '../images/rock-on.gif'
 
 import { BlankUl, SignoffImg, Signature } from '../elements'
@@ -119,51 +118,6 @@ ProjectLink.propTypes = {
   url: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
-
-const CoolThings = () => (
-  <div>
-    <h1>Here are some cool things I've built with React & D3</h1>
-    <p>
-      These demo well, but aren't practical. Little experiments to see how far
-      we can push this stuff {':)'}
-    </p>
-    <ul>
-      <ProjectLink url="http://swizec.github.io/react-d3-enter-exit-transitions/">
-        Animated typing
-      </ProjectLink>
-      <ProjectLink url="https://swizec.github.io/declarative-canvas-react-konva/">
-        Canvas billiards game
-      </ProjectLink>
-      <ProjectLink url="http://swizec.github.io/react-particles-experiment/">
-        Particle generator
-      </ProjectLink>
-      <ProjectLink url="https://swizec.github.io/react-fractals/">
-        Pythagorean fractal tree
-      </ProjectLink>
-      <ProjectLink url="http://swizec.github.io/space-invaders/">
-        Space Invaders
-      </ProjectLink>
-      <ProjectLink url="https://swizec.github.io/h1b-software-salaries/">
-        Tech salary visualization
-      </ProjectLink>
-      <ProjectLink url="https://swizec.github.io/migrations-map/">
-        A zoomable pannable map of global migrations
-      </ProjectLink>
-      <ProjectLink url="https://build-qoyobtahea.now.sh/">
-        An example of using flexbox in SVG
-      </ProjectLink>
-      <ProjectLink url="https://dist-exhowcijhf.now.sh/">
-        Using React Suspense and Time Slicing in dataviz
-      </ProjectLink>
-      <ProjectLink url={PieBarchart}>
-        A connected piechart barchart viz of travel expenses
-      </ProjectLink>
-      <ProjectLink url="/">This page {':)'}</ProjectLink>
-    </ul>
-
-    <p>No, these projects are not practical, but they demo well {':)'}</p>
-  </div>
-)
 
 const WhoSwiz = () => (
   <div>
@@ -302,7 +256,6 @@ const IndexPage = ({ data }) => (
 
     <Welcome />
     <Goals />
-    <CoolThings />
     <WhoSwiz />
 
     <Start />
