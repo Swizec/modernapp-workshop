@@ -9,14 +9,11 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import Swizec from '../images/swizec.jpg'
-import DashboardViz from '../images/dog-dashboard-scatterplots.mp4'
+import AppScreenshot from '../images/appscreenshot.png'
 import PieBarchart from '../images/connected-dataviz.mp4'
-import Salaries from '../images/salaries.gif'
-import JohnSnow from '../images/john-snow-cholera-map.jpeg'
-import Datasaurus from '../images/datasaurus.gif'
 import RockOn from '../images/rock-on.gif'
 
-import { Video, BlankUl, SignoffImg, Signature } from '../elements'
+import { BlankUl, SignoffImg, Signature } from '../elements'
 import { InstagramEmbed } from '../components/embeds'
 
 const Welcome = () => (
@@ -29,100 +26,67 @@ const Welcome = () => (
       />
     </a>
     <h1>Hello friend 👋</h1>
-
-    <p>Welcome to Swizec's Data visualization with React & D3 workshop.</p>
-
+    <p>Welcome to Swizec's Build and launch a Modern WebApp workshop.</p>
     <p>
-      This is often a 2 day workshop that starts with the basics of React and
-      ends with beautiful visualizations. Today we're focusing on the
-      visualization part. The exercises we work on together build towards a
-      final visualization.
+      Today you're going to learn a bunch of stuff. Some of it in detail, some
+      of it just enough to get stuff working. Our goal is to build an app
+      together and leave with enough knowledge to bring your ideas to life from
+      scratch.
+    </p>
+    <h2>The pitch ⁉️</h2>
+    <p>
+      The web has never been so productive. You can build and launch a whole
+      new app in just a few hours. It’s crazy! You can build what huge teams
+      with large budgets could only dream of a few years ago.
+    </p>
+    <ul>
+      <li>Beautiful UI? Got that. </li>
+      <li>Great SEO? Yep. Easy.</li>
+      <li>Amazing lighthouse speed scores? You got it.</li>
+      <li>Running heavy code on the backend? Done. </li>
+      <li>Saving user data? Yepp. </li>
+      <li>Works on</li>
+      mobile? Of course.
+      <li>What about an offline PWA? D’oh. </li>
+      <li>Makes money? Yep got that too.</li>
+    </ul>
+    <p>
+      Maybe it’s not your job to do all that in your company right now. The
+      bigger the company, the smaller your area of expertise. But wouldn’t it
+      be awesome, if you could do all of that?
     </p>
     <p>
-      These materials are going to stay online forever. I make tweaks when I do
-      new workshops so check back any time.
+      What if next time you have an idea for a great feature, you just build
+      it? Own the whole stack from start to finish. You’d be a superhero!
     </p>
+    <p>
+      Or maybe it’s just for you. Great idea for a project, an app, a painful
+      problem you want to solve? Now you can.
+    </p>
+    <h2>Stuff you should know</h2>
     <p>
       To get the most out of today's workshop, you should be familiar with 👇
     </p>
     <ul>
       <li>React</li>
-      <li>ideas behind componentization</li>
       <li>stateful/declarative rendering</li>
       <li>JSX</li>
       <li>modern ES6+ syntax</li>
       <li>component lifecycles</li>
+      <li>some familiary with styled-components</li>
     </ul>
     <p>
       <strong>But fear not!</strong>
     </p>
-    <p>I am here to guide you. We'll go through everything together.</p>
-    {/* <p>
-            Today we're going to build your first webapp with React and Friends.
-            We're going to use React to build components, React Router for
-            routing, styled components for styling, and Redux for state
-            management.
-        </p>
-        <p>
-            {`<Tomorrow>`} we're going to learn the basics of D3v4, look at
-            several strategies for integration with React, then build a gorgeous
-            visualization or two.
-        </p>
-        <p>
-            Your 1st day starts at the very beginning:{" "}
-            <em>
-                Why React? What problem does it solve? What makes it tick?
-                What's the ecosystem like? Why are components the future?
-            </em>
-        </p>
-        <p>
-            But fear not, we won't get stuck on the basics. By the end of your
-            first, you'll have built a full webapp and understand how it works.
-        </p>
-        <p>An infinite series of fun gifs like this 👇</p>
-        <p>
-            <Video src={MortyMindblowers} autoPlay loop />
-        </p>
-        <p>
-            Your 2nd day starts with the idea that you magically remember
-            everything and are now a pro. Don't worry if you're not, Swizec is
-            here to help and he's going to code everything with you. If you get
-            lost, sit back and observe. Checkout the example repo at key points
-            so you can catch up.
-        </p> */}
-
-    <p>
-      Exercises build towards this dashboard showing the connection between dog
-      breed size, popularity, and intelligence. It's a set of scatterplots that
-      work together.
-    </p>
-
-    <p>
-      In the 4 hour format final assembly will remain as homework for you, but
-      you'll have built all the necessary components. You can see it live,{' '}
-      <a href="https://build-qoyobtahea.now.sh/">here</a>
-    </p>
-
-    <p>
-      <Video src={DashboardViz} autoPlay loop muted />
-    </p>
-    <p>
-      We're gonna keep it simple. React, D3, and Chroma. No Redux or 3rd party
-      visualization libraries. Our goal is to really understand how things
-      work, not to talk about a thousand libraries you'll forget by tomorrow.
-    </p>
-  </div>
-)
-
-const WhyDataviz1 = () => (
-  <div>
-    <h1>Question for you ❓</h1>
-    <p>
-      <big>
-        What do engineering salaries, an 1854 cholera outbreak, and T. Rex have
-        in common?
-      </big>
-    </p>
+    <p>I am here to guide you. We'll go through everything together. :)</p>
+    <p>Here's what we're gonna build</p>
+    <a href="https://shared-grocery-list.swizec.now.sh">
+      <img
+        src={AppScreenshot}
+        title="shared grocery list app"
+        alt="shared grocery list app"
+      />
+    </a>
   </div>
 )
 
@@ -130,22 +94,19 @@ const Goals = () => (
   <div>
     <h1>Our goal today</h1>
     <p>Think of this as our setlist 🤘</p>
-    <p>
-      Our goal today is to get you comfortable with modern React, understand
-      D3, and have the wisdom to choose the right approach to solve your
-      specific challenges.
-    </p>
     <BlankUl>
-      <li>❓ why dataviz? why react? why d3?</li>
-      <li>📕 when you should or shouldn't use an existing library</li>
-      <li>🆕 overview of React dataviz libraries good for a quick start</li>
-      <li>🎓 learn to understand any D3 example out there</li>
-      <li>🏎 quickly integrate any D3 code in your React project</li>
-      <li>🔧 integrate D3 and React in a scaleable maintainable way</li>
-      <li>⚒ build simple animations with transitions</li>
-      <li>⚒ build complex animations with a game loop</li>
-      <li>💽 connect multiple charts to the same data</li>
+      <li>🕵️‍♀️ how to set up a static webapp with Gatsby</li>
+      <li>❓ why that's important for SEO and speed scores</li>
+      <li>🎨 how to build good looking UIs without design skills</li>
+      <li>🎓 how to move some functionality to the backend with serverless</li>
+      <li>📚 how to use serverless to store data</li>
+      <li>🔧 using GraphQL to query your data</li>
+      <li>🎣 React Hooks</li>
     </BlankUl>
+    <p>
+      You’ll leave this full-day workshop knowing some of the most powerful
+      (and fun!) technologies that make web development in 2019 so amazing.
+    </p>
   </div>
 )
 
@@ -214,8 +175,7 @@ const WhoSwiz = () => (
     />
     <p>
       Hi, I’m Swizec Teller, a geek with a hat. I help programmers become
-      software engineers. Through this workshop I'm going to teach you all I
-      know about building data visualization with React & D3.
+      software engineers.
     </p>
     <p>
       You can find out stuff about me, if you ask Google. But generally
@@ -245,7 +205,10 @@ const WhoSwiz = () => (
         <a href="https://www.swizec.com/reactd3js/">React + D3</a>, that's been
         great
       </li>
-      <li>helped over 10,000 people become better engineers</li>
+      <li>
+        created <a href="https://reactfordataviz.com">ReactForDataViz.com</a>{' '}
+        course
+      </li>
       <li>
         made this{' '}
         <a href="https://es2017.io">
@@ -253,40 +216,6 @@ const WhoSwiz = () => (
         </a>
       </li>
     </ul>
-  </div>
-)
-
-const WhyDataviz2 = () => (
-  <div>
-    <h2>
-      What do engineering salaries, an 1854 cholera outbreak, and T. Rex have
-      in common?
-    </h2>
-    <p>You understand them better with datavisualization!</p>
-    <a href="https://swizec.github.io/h1b-software-salaries/">
-      <img
-        src={Salaries}
-        alt="Salary visualization shows who and where makes the most"
-      />
-    </a>
-    <p>Salary visualization shows who and where makes the most</p>
-    <a href="https://en.wikipedia.org/wiki/John_Snow#Cholera">
-      <img
-        src={JohnSnow}
-        alt="John Snow's cholera map shows link between disease and drinking water"
-        style={{ height: 500 }}
-      />
-    </a>
-    <p>
-      John Snow's cholera map shows link between disease and drinking water
-    </p>
-    <a href="https://www.fastcompany.com/90124722/these-12-graphics-explain-why-data-viz-is-absolutely-crucial">
-      <img
-        src={Datasaurus}
-        alt="John Snow's cholera map shows link between disease and drinking water"
-      />
-    </a>
-    <p>Datasaurus show summary statistics aren't the whole story.</p>
   </div>
 )
 
@@ -312,6 +241,11 @@ const Start = () => (
       Answering that question will help you get the most out of today. You can
       call your answer out to the group, or just think about it.
     </p>
+    <iframe
+      title="Why are you here form"
+      src="https://swizecteller.typeform.com/to/oQgbmd"
+      style={{ width: '100%', height: 500, border: 0 }}
+    />
     <p>
       Code you'll write today works with <b>React 16</b> and uses modern{' '}
       <b>ES6+</b>. We'll assume a development environment created with{' '}
@@ -344,17 +278,9 @@ const ListContentPages = ({ data }) => {
 
   return (
     <div>
-      <h1>Setlist - Day 1</h1>
+      <h1>Setlist</h1>
 
-      {_.sortBy(pages, ({ node }) => node.fields.slug)
-        .slice(0, 4)
-        .map(MDLink)}
-
-      <h1>Setlist - Day 2</h1>
-
-      {_.sortBy(pages, ({ node }) => node.fields.slug)
-        .slice(4, pages.length)
-        .map(MDLink)}
+      {_.sortBy(pages, ({ node }) => node.fields.slug).map(MDLink)}
 
       <h2>
         <Link to="/fin">🎊 Fin</Link>
@@ -375,11 +301,9 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 
     <Welcome />
-    <WhyDataviz1 />
     <Goals />
     <CoolThings />
     <WhoSwiz />
-    <WhyDataviz2 />
 
     <Start />
 
@@ -390,6 +314,20 @@ const IndexPage = ({ data }) => (
     <a href="https://www.youtube.com/watch?v=QxIWDmmqZzY">
       <SignoffImg src={RockOn} title="Rock On 🤘" />
     </a>
+
+    <h2>Before you head out</h2>
+    <p>
+      <big>
+        Please take a moment to answer a couple questions. Helps me improve,
+        makes you feel good.
+      </big>
+    </p>
+    <iframe
+      title="Why are you here form"
+      src="https://swizecteller.typeform.com/to/ARfTbr"
+      style={{ width: '100%', height: 500, border: 0 }}
+    />
+
     <Signature />
   </Layout>
 )

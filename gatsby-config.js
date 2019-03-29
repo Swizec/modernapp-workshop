@@ -1,14 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'React and D3v4 workshop by Swizec',
-    description: 'React and D3v4 workshop by Swizec',
+    title: 'Build and launch a Modern WebApp - workshop by Swizec',
+    description:
+      'The web has never been so productive. You can build and launch a whole new app in just a few hours. It’s crazy! You can build what huge teams with large budgets could only dream of a few years ago.',
     author: 'Swizec Teller',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
-      options: { pathToConfigModule: 'src/utils/typography.js' },
+      options: {
+        pathToConfigModule: 'src/utils/typography.js',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -35,7 +38,10 @@ module.exports = {
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
-      options: { name: 'src', path: `${__dirname}/src/` },
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`,
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -85,7 +91,10 @@ module.exports = {
               classPrefix: 'language-',
             },
           },
-          { resolve: 'gatsby-remark-copy-linked-files', options: {} },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {},
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {

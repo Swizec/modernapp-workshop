@@ -25,9 +25,9 @@ const Fin = ({
       </p>
       <p>
         Thank you for coming to my workshop! I hope you had a great time and
-        feel confident in your ability to build data visualizations with React
-        and D3. We covered a lot of ground today so don't worry if things feel
-        a little shakey.
+        feel confident in your ability to bring your ideas to life with React,
+        Gatsby, GraphQL, and Serverless. We covered a lot of ground today so
+        don't worry if things feel a little shakey.
       </p>
       <p>
         This page is staying up so you can refer back, if you ever need a quick
@@ -36,7 +36,7 @@ const Fin = ({
       <p>
         <big>
           Please fill out{' '}
-          <a href="https://swizecteller.typeform.com/to/BGXEbd">
+          <a href="https://swizecteller.typeform.com/to/ARfTbr">
             this feedback form
           </a>
           . It helps me improve. <br />

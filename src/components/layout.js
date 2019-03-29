@@ -28,10 +28,10 @@ const Header = () => (
             textShadow: 'none',
           }}
         >
-          Data visualization with React & D3 2018 -{' '}
-          <small>workshop by Swizec</small>
+          Build and launch a Modern WebApp - <small>workshop by Swizec</small>
         </Link>
       </h2>
+      <p style={{ color: 'white', marginBottom: 0 }}> modernwebapp.dev </p>
     </div>
   </div>
 )
@@ -39,15 +39,16 @@ const Header = () => (
 const Layout = ({ children }) => (
   <div>
     <Helmet
-      title="Data visualization with React & D3v4 - workshop by Swizec"
+      title="Build and launch a Modern WebApp - workshop by Swizec"
       meta={[
         {
           name: 'description',
-          content: 'Data visualization with React & D3v4',
+          content:
+            'The web has never been so productive. You can build and launch a whole new app in just a few hours. It’s crazy! You can build what huge teams with large budgets could only dream of a few years ago.',
         },
         {
           name: 'keywords',
-          content: 'react, workshop, d3, dataviz, data visualization',
+          content: 'react, workshop, graphql, serverless',
         },
       ]}
     />
