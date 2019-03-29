@@ -127,3 +127,11 @@ $ curl -G 'https://z1kksu6iwb.execute-api.us-east-1.amazonaws.com/dev/query' --d
 ### Use apollo client to re-fetch your list on mount
 
 ## Enable PWA mode
+
+## Deploy
+
+-- Install now cli
+
+-- Add Gatsby config
+
+Do the thing
