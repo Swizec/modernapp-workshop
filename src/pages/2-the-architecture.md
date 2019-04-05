@@ -4,7 +4,7 @@ title: 'The architecture'
 
 # Our goal is an offline-capable app with dynamic data
 
-Swizec explains things and draws on the whiteboard
+![](../images/architecture.jpg)
 
 ## UI in React
 
