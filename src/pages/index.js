@@ -7,8 +7,8 @@ import _ from 'lodash'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import SwizecTeaching from '../components/SwizecTeaching'
 
-import Swizec from '../images/swizec.jpg'
 import AppScreenshot from '../images/appscreenshot.png'
 import RockOn from '../images/rock-on.gif'
 
@@ -18,11 +18,7 @@ import { InstagramEmbed } from '../components/embeds'
 const Welcome = () => (
   <div>
     <a href="https://swizec.com">
-      <img
-        src={Swizec}
-        title="Swizec at Write the Docs Prague in 2014"
-        alt="Swizec at Write the Docs Prague in 2014"
-      />
+      <SwizecTeaching />
     </a>
     <h1>Hello friend 👋</h1>
     <p>Welcome to Swizec's Build and launch a Modern WebApp workshop.</p>
@@ -276,8 +272,8 @@ const IndexPage = ({ data }) => (
       </big>
     </p>
     <iframe
-      title="Why are you here form"
-      src="https://swizecteller.typeform.com/to/ARfTbr"
+      title="How was it form"
+      src="https://swizecteller.typeform.com/to/SD7paT"
       style={{ width: '100%', height: 500, border: 0 }}
     />
 
